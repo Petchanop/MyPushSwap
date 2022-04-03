@@ -6,19 +6,19 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 23:40:03 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/03 23:30:56 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/04/03 23:59:43 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_print_slst(t_slist *lst)
+void	ft_print_slst(t_slist *lst)
 {
-        while (lst != NULL)
-        {
-                printf("lst : %d\n", lst->num);
-                lst = lst->next;
-        }
+	while (lst != NULL)
+	{
+		printf("lst : %d\n", lst->num);
+		lst = lst->next;
+	}
 }
 
 t_slist	*ft_intlst_new(int num)

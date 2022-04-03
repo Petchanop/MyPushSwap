@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 20:13:54 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/03 23:32:54 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/04/03 23:57:45 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ size_t	ft_slstlen(t_slist *lst);
 
 void	ft_swap_ab(t_slist *lst)
 {
-	int	tmp;
 	t_slist	*tm1;
 	t_slist	*tm2;
+	int		tmp;
 
 	if (ft_slstlen(lst) > 1)
 	{
