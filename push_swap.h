@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_utils2.c                                 :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/03 23:15:58 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/04 20:24:19 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/04/04 20:09:17 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/04/04 20:12:05 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-t_slist	*ft_slstlast(t_slist *lst)
-{
-	if (lst)
-	{
-		while (lst->next)
-			lst = lst->next;
-	}
-	return (lst);
-}
-void	ft_slstclear(t_slist **lst)
-{
-	t_slist	*tmp;
+#include "libft/libft.h"
 
-	while (*lst)
-	{
-		tmp = *lst;
-		*lst = (*lst)->next;
-		free(tmp);
-		tmp = NULL;
-	}
-}
+typedef struct s_slist
+{
+	int	num;
+	struct	s_slist	*next;
+	struct	s_slist	*head;
+	struct	s_slist	*tail;
+}	t_slist;
+
+#endif

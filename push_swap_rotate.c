@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_utils2.c                                 :+:      :+:    :+:   */
+/*   push_swap_rotate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/03 23:15:58 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/04 20:24:19 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/04/04 17:11:47 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/04/04 20:31:27 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_slist	*ft_slstlast(t_slist *lst)
-{
-	if (lst)
-	{
-		while (lst->next)
-			lst = lst->next;
-	}
-	return (lst);
-}
-void	ft_slstclear(t_slist **lst)
+t_slist *ft_slstlast(t_list *lst);
+
+size_t	ft_slstlen(t_slist *lst);
+
+void	ft_rotate_lst(t_slist *a)
 {
 	t_slist	*tmp;
+	size_t	len;
+	int	temp;
 
-	while (*lst)
+	tmp = NULL;
+	if (a)
 	{
-		tmp = *lst;
-		*lst = (*lst)->next;
-		free(tmp);
-		tmp = NULL;
+		len = ft_slstlen(a);
+		tmp = a;
+		while (len > 1)
+		{
+			temp = tmp->num;
+			tmp->num = tmp->next->num;
+			tmp->next->num = temp;
+			tmp = tmp->next;
+			len--;
+		}
 	}
 }
