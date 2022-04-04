@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_pab.c                                    :+:      :+:    :+:   */
+/*   push_swap_reverse.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/03 01:59:12 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/04 21:56:50 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/04/04 20:52:30 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/04/04 22:54:02 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,33 @@
 
 t_slist	*ft_intlst_new(int num);
 
-void	ft_add_slstfront(t_slist **lst, t_slist *new);
+t_slist	*ft_slstlast(t_slist *lst);
+
+size_t	ft_slstlen(t_slist *lst);
 
 void	ft_delslst(t_slist **lst);
 
-t_slist	*ft_push_pab(t_slist **a, t_slist *b)
+void	ft_add_slstfront(t_slist **lst, t_slist *new);
+
+void	ft_reverse_rotate(t_slist **a)
 {
+	t_slist	*re;
+	t_slist	*del;
 	t_slist	*tmp;
 
+	re = NULL;
 	tmp = NULL;
 	if (a)
 	{
-		if (!b)
-			b = ft_intlst_new((*a)->num);
-		else
-		{
-			tmp = ft_intlst_new((*a)->num);
-			ft_add_slstfront(&b, tmp);
-		}
+		del = ft_slstlast(*a);
+		re = ft_intlst_new(del->num);
+		ft_add_slstfront(a, re);
 		tmp = *a;
-		ft_delslst(a);
-		free(tmp);
+		while (tmp->next->next)
+			tmp = tmp->next;
+		tmp->next = NULL;
+		free(tmp->next);
 	}
-	return (b);
 }
+
+

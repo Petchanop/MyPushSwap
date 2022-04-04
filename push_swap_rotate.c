@@ -6,13 +6,13 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 17:11:47 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/04 20:31:27 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/04/04 21:31:29 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_slist *ft_slstlast(t_list *lst);
+t_slist *ft_slstlast(t_slist *lst);
 
 size_t	ft_slstlen(t_slist *lst);
 
