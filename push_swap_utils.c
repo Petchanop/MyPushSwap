@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 23:40:03 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/04 22:54:05 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/04/05 18:23:05 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_print_slst(t_slist *lst)
 {
 	while (lst != NULL)
 	{
-		printf("lst : %d\n", lst->num);
+		printf("%d\n", lst->num);
 		lst = lst->next;
 	}
 }

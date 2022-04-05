@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:52:30 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/04 22:54:02 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/04/05 17:56:08 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,8 @@ void	ft_reverse_rotate(t_slist **a)
 	}
 }
 
-
+void	ft_reverse_all(t_slist **a, t_slist **b)
+{
+	ft_reverse_rotate(a);
+	ft_reverse_rotate(b);
+}

@@ -6,13 +6,13 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 17:11:47 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/04 21:31:29 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/04/05 17:18:50 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_slist *ft_slstlast(t_slist *lst);
+t_slist	*ft_slstlast(t_slist *lst);
 
 size_t	ft_slstlen(t_slist *lst);
 
@@ -20,7 +20,7 @@ void	ft_rotate_lst(t_slist *a)
 {
 	t_slist	*tmp;
 	size_t	len;
-	int	temp;
+	int		temp;
 
 	tmp = NULL;
 	if (a)
@@ -36,4 +36,10 @@ void	ft_rotate_lst(t_slist *a)
 			len--;
 		}
 	}
+}
+
+void	ft_rotate_all(t_slist *a, t_slist *b)
+{
+	ft_rotate_lst(a);
+	ft_rotate_lst(b);
 }
