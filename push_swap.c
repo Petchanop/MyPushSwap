@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 17:05:12 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/05 19:40:39 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/04/09 19:18:07 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,11 @@ int	main(int argc, char **argv)
 			ft_show_ab(a, b);
 		}
 	}
-	if (ft_check_sort(a, b))
+	/*if (ft_check_sort(a, b))
 	{
 		ft_slstclear(&a);
 		ft_slstclear(&b);
-	}
+	}*/
 	return (0);
 }
 

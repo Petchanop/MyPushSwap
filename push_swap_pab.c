@@ -18,23 +18,20 @@ void	ft_add_slstfront(t_slist **lst, t_slist *new);
 
 void	ft_delslst(t_slist **lst);
 
-t_slist	*ft_push_pab(t_slist **a, t_slist *b)
+void	ft_push_pab(t_slist **a, t_slist *b)
 {
 	t_slist	*tmp;
 
 	tmp = NULL;
-	if (a)
+	if (b)
 	{
-		if (!b)
-			b = ft_intlst_new((*a)->num);
+		if (!a)
+			*a = ft_intlst_new((b)->num);
 		else
 		{
-			tmp = ft_intlst_new((*a)->num);
-			ft_add_slstfront(&b, tmp);
+			tmp = ft_intlst_new((b)->num);
+			ft_add_slstfront(a, tmp);
 		}
-		tmp = *a;
-		ft_delslst(a);
-		free(tmp);
+		ft_delslst(&b);
 	}
-	return (b);
 }
