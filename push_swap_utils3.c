@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int	ft_check_sort(t_slist *a, t_slist *b)
+int	ft_check_sort(t_list *a, t_list *b)
 {
 	int	count;
 	int	len;
@@ -23,7 +23,7 @@ int	ft_check_sort(t_slist *a, t_slist *b)
 	{
 		while (a)
 		{
-			if (a->num <= a->next->num && a->next)
+			if (a->content <= a->next->content && a->next)
 				count++;
 			a = a->next;
 		}
@@ -33,17 +33,17 @@ int	ft_check_sort(t_slist *a, t_slist *b)
 	return (0);
 }
 
-void	ft_show_ab(t_slist *a, t_slist *b)
+void	ft_show_ab(t_list *a, t_list *b)
 {
 	printf("---------------------------------------");
 	printf("a	b\n");
 	while (a || b)
 	{
 		if (a)
-			printf("%d", a->num);
+			printf("%d", a->content);
 		printf("	");
 		if (b)
-			printf("%d", a->num);
+			printf("%d", a->content);
 		printf("\n");
 	}
 	printf("---------------------------------------");

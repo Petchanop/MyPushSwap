@@ -12,29 +12,29 @@
 
 #include "push_swap.h"
 
-t_slist	*ft_intlst_new(int num);
+t_list	*ft_intlst_new(int num);
 
-t_slist	*ft_slstlast(t_slist *lst);
+t_list	*ft_lstlast(t_list *lst);
 
-size_t	ft_slstlen(t_slist *lst);
+size_t	ft_lstlen(t_list *lst);
 
-void	ft_delslst(t_slist **lst);
+void	ft_dellst(t_list **lst);
 
-void	ft_add_slstfront(t_slist **lst, t_slist *new);
+void	ft_add_lstfront(t_list **lst, t_list *new);
 
-void	ft_reverse_rotate(t_slist **a)
+void	ft_reverse_rotate(t_list **a)
 {
-	t_slist	*re;
-	t_slist	*del;
-	t_slist	*tmp;
+	t_list	*re;
+	t_list	*del;
+	t_list	*tmp;
 
 	re = NULL;
 	tmp = NULL;
 	if (a)
 	{
-		del = ft_slstlast(*a);
-		re = ft_intlst_new(del->num);
-		ft_add_slstfront(a, re);
+		del = ft_lstlast(*a);
+		re = ft_intlst_new(del->content);
+		ft_add_lstfront(a, re);
 		tmp = *a;
 		while (tmp->next->next)
 			tmp = tmp->next;
@@ -43,7 +43,7 @@ void	ft_reverse_rotate(t_slist **a)
 	}
 }
 
-void	ft_reverse_all(t_slist **a, t_slist **b)
+void	ft_reverse_all(t_list **a, t_list **b)
 {
 	ft_reverse_rotate(a);
 	ft_reverse_rotate(b);

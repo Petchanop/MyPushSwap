@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-t_slist	*ft_slstlast(t_slist *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst)
 	{
@@ -22,9 +22,9 @@ t_slist	*ft_slstlast(t_slist *lst)
 	return (lst);
 }
 
-void	ft_slstclear(t_slist **lst)
+void	ft_lstclear(t_list **lst)
 {
-	t_slist	*tmp;
+	t_list	*tmp;
 
 	while (*lst)
 	{
