@@ -12,32 +12,30 @@
 
 #include "push_swap.h"
 
-void	ft_print_slst(t_slist *lst)
+void	ft_print_lst(t_list *lst)
 {
 	while (lst != NULL)
 	{
-		printf("%d\n", lst->num);
+		printf("%d\n", lst->content);
 		lst = lst->next;
 	}
 }
 
-t_slist	*ft_intlst_new(int num)
+t_list	*ft_intlst_new(int content)
 {
-	t_slist	*new;
+	t_list	*new;
 
-	new = malloc(sizeof(t_slist));
+	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
-	new->num = num;
+	new->content = content;
 	new->next = NULL;
-	new->head = NULL;
-	new->tail = NULL;
 	return (new);
 }
 
-void	ft_add_slst(t_slist **lst, t_slist *new)
+void	ft_add_lst(t_list **lst, t_list *new)
 {
-	t_slist	*tmp;
+	t_list	*tmp;
 
 	tmp = *lst;
 	if (*lst)
@@ -51,7 +49,7 @@ void	ft_add_slst(t_slist **lst, t_slist *new)
 		*lst = new;
 }
 
-void	ft_add_slstfront(t_slist **lst, t_slist *new)
+void	ft_add_lstfront(t_list **lst, t_list *new)
 {
 	if (new)
 	{
@@ -60,13 +58,13 @@ void	ft_add_slstfront(t_slist **lst, t_slist *new)
 	}
 }
 
-void	ft_delslst(t_slist **lst)
+void	ft_delslt(t_list **lst)
 {
 	if (*lst)
 		*lst = (*lst)->next;
 }
 
-size_t	ft_slstlen(t_slist *lst)
+size_t	ft_lstlen(t_list *lst)
 {
 	size_t	len;
 

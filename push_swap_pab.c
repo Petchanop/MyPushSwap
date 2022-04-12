@@ -12,26 +12,28 @@
 
 #include "push_swap.h"
 
-t_slist	*ft_intlst_new(int num);
+t_list	*ft_intlst_new(int content);
 
-void	ft_add_slstfront(t_slist **lst, t_slist *new);
+void	ft_add_lstfront(t_list **lst, t_list *new);
 
-void	ft_delslst(t_slist **lst);
+void	ft_dellst(t_list **lst);
 
-void	ft_push_pab(t_slist **a, t_slist *b)
+void	ft_push_pab(t_list **a, t_list *b)
 {
-	t_slist	*tmp;
+	t_list	*tmp;
 
 	tmp = NULL;
 	if (b)
 	{
 		if (!a)
-			*a = ft_intlst_new((b)->num);
+			*a = ft_intlst_new((b)->content);
 		else
 		{
-			tmp = ft_intlst_new((b)->num);
-			ft_add_slstfront(a, tmp);
+			tmp = ft_intlst_new((b)->content);
+			ft_add_lstfront(a, tmp);
 		}
-		ft_delslst(&b);
+		tmp = b;
+		b = b->next;
+		free(tmp);
 	}
 }

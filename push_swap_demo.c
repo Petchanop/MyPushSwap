@@ -1,45 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_rotate.c                                 :+:      :+:    :+:   */
+/*   push_swap_demo.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 17:11:47 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/05 17:18:50 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/04/12 15:24:57 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/04/12 15:44:46 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*ft_lstlast(t_list *lst);
+void	ft_try_swap(t_list
 
-size_t	ft_lstlen(t_list *lst);
 
-void	ft_roate_lst(t_list *a)
-{
-	t_list	*tmp;
-	size_t	len;
-	int		temp;
-
-	tmp = NULL;
-	if (a)
-	
-		len = ft_lstlen(a);
-		tmp = a;
-		while (len > 1)
-		{
-			temp = tmp->content;
-			tmp->content = tmp->next->content;
-			tmp->next->content = temp;
-			tmp = tmp->next;
-			len--;
-		}
-	}
-}
-
-void	ft_rotate_all(t_list *a, t_list *b)
-{
-	ft_rotate_lst(a);
-	ft_rotate_lst(b);
-}

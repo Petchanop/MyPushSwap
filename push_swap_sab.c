@@ -12,28 +12,28 @@
 
 #include "push_swap.h"
 
-size_t	ft_slstlen(t_slist *lst);
+size_t	ft_lstlen(t_list *lst);
 
-void	ft_swap_ab(t_slist *lst)
+void	ft_swap_ab(t_list *lst)
 {
-	t_slist	*tm1;
-	t_slist	*tm2;
+	t_list	*tm1;
+	t_list	*tm2;
 	int		tmp;
 
-	if (ft_slstlen(lst) > 1)
+	if (ft_lstlen(lst) > 1)
 	{
 		tm1 = lst;
 		tm2 = lst->next;
-		if (tm1->num > tm2->num)
+		if (tm1->content > tm2->content)
 		{
-			tmp = tm1->num;
-			tm1->num = tm2->num;
-			tm2->num = tmp;
+			tmp = tm1->content;
+			tm1->content = tm2->content;
+			tm2->content = tmp;
 		}
 	}
 }
 
-void	ft_swap_bothab(t_slist *a, t_slist *b)
+void	ft_swap_bothab(t_list *a, t_list *b)
 {
 	ft_swap_ab(a);
 	ft_swap_ab(b);
