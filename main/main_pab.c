@@ -14,19 +14,19 @@
 
 int	ft_atoi(char const *num);
 
-t_slist	*ft_intlst_new(int num);
+t_list	*ft_intlst_new(int num);
 
-void	ft_push_pab(t_slist **a, t_slist *b);
+void	ft_push_pab(t_list **a, t_list **b);
 
-void	ft_print_slst(t_slist *lst);
+void	ft_print_lst(t_list *lst);
 
 int	main(int argc, char **argv)
 {
 	int	i;
 	int	lst;
-	t_slist	*a;
-	t_slist	*a1;
-	t_slist	*b;
+	t_list	*a;
+	t_list	*a1;
+	t_list	*b;
 
 	i = 1;
 	lst = 0;
@@ -39,25 +39,21 @@ int	main(int argc, char **argv)
 		{
 			lst = ft_atoi(argv[i]);
 			a1 = ft_intlst_new(lst);
-			ft_add_slst(&a, a1);
+			ft_add_lst(&a, a1);
 			i++;
 		}
-		//ft_print_slst(a);
-		ft_push_pab(&b, a);
+		ft_push_pab(&b, &a);
 		a1 = a;
 		a = a->next;
 		free(a1);
-		//ft_push_pab(&a, a);
-		ft_push_pab(&b, a);
+		ft_show_ab(a, b);
+		ft_push_pab(&b, &a);
 		a1 = a;
 		a = a->next;
 		free(a1);
-		//ft_push_pab(&b, a);
-		ft_print_slst(a);
-		printf("\n");
-		ft_print_slst(b);
-		ft_slstclear(&a);
-		ft_slstclear(&b);
+		ft_show_ab(a, b);
+		ft_lstnumclear(&a);
+		ft_lstnumclear(&b);
 	}
 	return (0);
 }

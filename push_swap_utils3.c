@@ -18,16 +18,16 @@ int	ft_check_sort(t_list *a, t_list *b)
 	int	len;
 
 	count = 0;
-	len = ft_slstlen(a);
+	len = ft_lstlen(a);
 	if (!b)
 	{
-		while (a)
+		while (a->next)
 		{
 			if (a->content <= a->next->content && a->next)
 				count++;
 			a = a->next;
 		}
-		if (count == len)
+		if (count == len - 1)
 			return (1);
 	}
 	return (0);
@@ -36,14 +36,20 @@ int	ft_check_sort(t_list *a, t_list *b)
 void	ft_show_ab(t_list *a, t_list *b)
 {
 	printf("---------------------------------------");
-	printf("a	b\n");
+	printf("\na	b\n");
 	while (a || b)
 	{
 		if (a)
+		{
 			printf("%d", a->content);
+			a = a->next;
+		}
 		printf("	");
 		if (b)
-			printf("%d", a->content);
+		{
+			printf("%d", b->content);
+			b = b->next;
+		}
 		printf("\n");
 	}
 	printf("---------------------------------------");

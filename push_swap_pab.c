@@ -12,28 +12,27 @@
 
 #include "push_swap.h"
 
+size_t	ft_lstlen(t_list *lst);
+
 t_list	*ft_intlst_new(int content);
 
 void	ft_add_lstfront(t_list **lst, t_list *new);
 
 void	ft_dellst(t_list **lst);
 
-void	ft_push_pab(t_list **a, t_list *b)
+void	ft_push_pab(t_list **a, t_list **b)
 {
 	t_list	*tmp;
 
 	tmp = NULL;
-	if (b)
+	if (!ft_lstlen(*a))
+		*a = ft_intlst_new((*b)->content);
+	else
 	{
-		if (!a)
-			*a = ft_intlst_new((b)->content);
-		else
-		{
-			tmp = ft_intlst_new((b)->content);
-			ft_add_lstfront(a, tmp);
-		}
-		tmp = b;
-		b = b->next;
-		free(tmp);
+		tmp = ft_intlst_new((*b)->content);
+		ft_add_lstfront(a, tmp);
 	}
+	tmp = *b;
+	*b = (*b)->next;
+	free(tmp);
 }

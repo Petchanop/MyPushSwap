@@ -12,6 +12,8 @@
 
 #include "push_swap.h"
 
+size_t	ft_lstlen(t_list *lst);
+
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst)
@@ -22,7 +24,7 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-void	ft_lstclear(t_list **lst)
+void	ft_lstnumclear(t_list **lst)
 {
 	t_list	*tmp;
 
@@ -33,4 +35,34 @@ void	ft_lstclear(t_list **lst)
 		free(tmp);
 		tmp = NULL;
 	}
+}
+
+t_list	*ft_find_lst(t_list *lst)
+{
+	size_t	half;
+
+	half = ft_lstlen(lst) / 2;
+	while (half)
+	{
+		lst = lst->next;
+		half--;
+	}
+	return (lst);
+}
+
+int	ft_count_compare(t_list *a, t_list *a1, int n)
+{
+	t_list	*tmp;
+	int	count;
+
+	tmp = a;
+	count = 0;
+	while (tmp && n)
+	{
+		if (a1->content > tmp->content)
+			count++;
+		tmp = tmp->next;
+		n--;
+	}
+	return (count);
 }

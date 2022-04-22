@@ -22,29 +22,28 @@ void	ft_dellst(t_list **lst);
 
 void	ft_add_lstfront(t_list **lst, t_list *new);
 
-void	ft_reverse_rotate(t_list **a)
+t_list	*ft_reverse_rotate(t_list **a)
 {
-	t_list	*re;
-	t_list	*del;
+	t_list	*head;
 	t_list	*tmp;
 
-	re = NULL;
+	head = NULL;
 	tmp = NULL;
-	if (a)
+	if (*a)
 	{
-		del = ft_lstlast(*a);
-		re = ft_intlst_new(del->content);
-		ft_add_lstfront(a, re);
+		tmp = ft_lstlast(*a);
+		head = ft_intlst_new(tmp->content);
+		ft_add_lstfront(a, head);
 		tmp = *a;
 		while (tmp->next->next)
 			tmp = tmp->next;
 		tmp->next = NULL;
-		free(tmp->next);
 	}
+	return (*a);
 }
 
 void	ft_reverse_all(t_list **a, t_list **b)
 {
-	ft_reverse_rotate(a);
-	ft_reverse_rotate(b);
+	*a = ft_reverse_rotate(a);
+	*b = ft_reverse_rotate(b);
 }

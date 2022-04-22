@@ -51,14 +51,18 @@ void	ft_add_lst(t_list **lst, t_list *new)
 
 void	ft_add_lstfront(t_list **lst, t_list *new)
 {
+	t_list	*tmp;
+
+	tmp = NULL;
 	if (new)
 	{
-		new->next = *lst;
-		*lst = new;
+		tmp = *lst;
+		*lst  = new;
+		new->next = tmp;
 	}
 }
 
-void	ft_delslt(t_list **lst)
+void	ft_dellst(t_list **lst)
 {
 	if (*lst)
 		*lst = (*lst)->next;
