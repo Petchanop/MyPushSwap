@@ -19,7 +19,7 @@ int	ft_check_sort(t_list *a, t_list *b)
 
 	count = 0;
 	len = ft_lstlen(a);
-	if (!b)
+	if (!b || b)
 	{
 		while (a->next)
 		{

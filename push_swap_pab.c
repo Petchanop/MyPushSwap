@@ -25,6 +25,8 @@ void	ft_push_pab(t_list **a, t_list **b)
 	t_list	*tmp;
 
 	tmp = NULL;
+	if (!*b)
+		return ;
 	if (!ft_lstlen(*a))
 		*a = ft_intlst_new((*b)->content);
 	else

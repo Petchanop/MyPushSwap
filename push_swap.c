@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 17:05:12 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/09 19:18:07 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/04/24 14:37:26 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,75 +38,107 @@ void	push_swap(t_list **a, t_list **b)
 //	t_list	*ruphalf;
 	t_list	*lasta;
 	t_list	*lastb;
+	int	ua;
+	int	la;
+	int	ub;
+	int	lb;
 	
 	lhalf = ft_find_lst(*a);
 	rhalf = ft_find_lst(*b);
 	lasta = ft_lstlast(*a);
-	if (*b)
-		lastb = ft_lstlast(*b);
-	printf("upper : %d\n", ft_count_compare(*a, lasta, (int)(ft_lstlen(*a) / 2)));
-	printf("lower : %d\n", ft_count_compare(lhalf, *a, (int)(ft_lstlen(*a) / 2)));
-	if (ft_count_compare(lhalf, *a, (ft_lstlen(*a) / 2)) > ft_count_compare(*a, lasta, (int)(ft_lstlen(*a) / 2)))
+	lastb = ft_lstlast(*b);
+	printf("upper : %d\n", ft_count_compare(*a, lasta, (ft_lstlen(*a) / 2)));
+	printf("lower : %d\n", ft_count_compare(lhalf, *a, (ft_lstlen(*a) / 2)));
+	ua = ft_count_compare(*a, lasta, (ft_lstlen(*a) / 2));
+	la = ft_count_compare(lhalf, *a, (ft_lstlen(*a) / 2));
+	ub = ft_count_compare(*b, lastb, (ft_lstlen(*b) / 2));
+	lb = ft_count_compare(rhalf, *b, (ft_lstlen(*b) / 2));
+	if (la > ua)
 	{
-		if (ft_count_compare(rhalf, *b, (int)(ft_lstlen(*b) / 2)) < (int)(ft_lstlen(*b) / 2) - 1)
+		if (ua == 0 && la > 0)
+		{
+			ft_reverse_rotate(a);
+			printf("rra\n");
+			return ;	
+		}	
+	 	if (la < ua && lb > ub && lasta->content > (*a)->content && lastb->content < (*b)->content)
+	 	{
+	 		ft_reverse_all(a, b);
+	 		printf("reall\n");
+	 		return ;
+	 	}
+	 	if (la > ua && lasta->content < (*a)->content)
+	 	{
+	 		ft_rotate_lst(*a);
+	 		printf("ra\n");
+	 		return ;
+	 	}
+	 	if (lb < ub && lastb->content > (*b)->content)
+	 	{
+	 		ft_rotate_lst(*b);
+	 		printf("ra\n");
+	 		return ;
+	 	}
+	}
+	if (ua > la)
+	{
+		if (ua > la && ub < lb && lasta->content < (*a)->content && lastb->content > (*b)->content)
 		{
 			ft_reverse_all(a, b);
-			printf("reall\n");
+			printf("rrr\n");
 			return ;
 		}
-		else
+		if (ua > la && lasta->content < (*a)->content)
 		{
-			ft_rotate_lst(*a);
-			printf("ra\n");
-			return ;
-		}
-	}
-	if (ft_count_compare(*a, lasta, (ft_lstlen(*a) / 2)) < ft_count_compare(lhalf, *a, (ft_lstlen(*a) / 2)))
-	{
-		ft_reverse_rotate(a);
-		printf("rra\n");
-		return ;
-	}
-//	if (ft_count_compare(lhalf, *a, (ft_lstlen(*a) / 2)) > ft_count_compare(*a, lasta, (ft_lstlen(*a) / 2)))
-//	{
-
-
-//	}
-	if (*a && ft_lstlen(*b) > 1)
-	{
-		if ((*a)->content > (*a)->next->content && (*b)->content < (*b)->next->content)
-		{
-			ft_swap_ab(*a);	
-			ft_swap_ab(*b);
-			printf("sab\n");
+			ft_reverse_rotate(a);
+			printf("rra\n");
 			return ;	
 		}
+		if (ub < lb && lastb->content > (*b)->content)
+		{
+			ft_reverse_rotate(b);
+			printf("rrb\n");
+			return ;
+		}
 	}
-	if ((*a)->content > (*a)->next->content)
+	if ((ft_count_compare(*a, *a, ft_lstlen(*a)) < (int)ft_lstlen(*a) / 2 
+			&& !ft_check_sort(*a, *b) && (*a)->content < (*a)->next->content)) 
 	{
-		ft_swap_ab(*a);
-		printf("sa\n");
+		ft_push_pab(b, a);
+		printf("pb\n");
 		return ;
 	}
-	if ((*b)->content > (*b)->next->content)
+	if (*a)
 	{
-		ft_swap_ab(*b);
-		printf("sb\n");
-		return ;
+		if (*b)
+		{
+			if ((*a)->content > (*a)->next->content && (*b)->content < (*b)->next->content)
+			{
+				ft_swap_ab(*a);	
+				ft_swap_ab(*b);
+				printf("sab\n");
+				return ;	
+			}
+			if ((*b)->content < (*b)->next->content)
+			{
+				ft_swap_ab(*b);
+				printf("sb\n");
+				return ;
+			}
+		}
+		if ((*a)->content > (*a)->next->content)
+		{
+				ft_swap_ab(*a);
+				printf("sa\n");
+				return ;
+		}
 	}
-/*	if (*b && !ft_count_compare(*a, *b, (ft_lstlen(*a))) && ft_check_sort(*a, *b))
+	if (*b && ft_count_compare(*b, *b, (ft_lstlen(*b))) == (int)ft_lstlen(*b) - 1 && ft_check_sort(*a, *b))
 	{
 		ft_push_pab(a, b);
 		printf("pa\n");
 		return ;
 	}
-	else //if (!ft_count_compare(*a, *b, (ft_lstlen(*a))))
-	{
-		ft_push_pab(b, a);
-		printf("pb\n");
-		return ;	
-	}*/
-	
 		//ft_swap_ab(*a);	
 		//ft_swap_ab(*b);	
 		//ft_push_pab(b, a);

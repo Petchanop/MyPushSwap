@@ -24,12 +24,9 @@ void	ft_swap_ab(t_list *lst)
 	{
 		tm1 = lst;
 		tm2 = lst->next;
-		if (tm1->content > tm2->content)
-		{
-			tmp = tm1->content;
-			tm1->content = tm2->content;
-			tm2->content = tmp;
-		}
+		tmp = tm1->content;
+		tm1->content = tm2->content;
+		tm2->content = tmp;
 	}
 }
 

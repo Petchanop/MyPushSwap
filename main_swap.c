@@ -47,11 +47,11 @@ int	main(int argc, char **argv)
 			ft_show_ab(a, b);
 		}
 		i = 0;
-		while (i < 8)
+		while (i < 50)
 		{
 			push_swap(&a, &b);
 			ft_show_ab(a, b);
-			if (ft_check_sort(a, b))
+			if (ft_check_sort(a, b) && !b)
 			{
 				ft_lstnumclear(&a);
 				ft_lstnumclear(&b);
