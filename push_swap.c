@@ -49,11 +49,13 @@ void	push_swap(t_list **a, t_list **b)
 	lastb = ft_lstlast(*b);
 	printf("upper : %d\n", ft_count_compare(*a, lasta, (ft_lstlen(*a) / 2)));
 	printf("lower : %d\n", ft_count_compare(lhalf, *a, (ft_lstlen(*a) / 2)));
+	printf("bupper : %d\n", ft_count_compare(*b, lastb, (ft_lstlen(*b) / 2)));
+	printf("blower : %d\n", ft_count_compare(rhalf, *b, (ft_lstlen(*b) / 2)));
 	ua = ft_count_compare(*a, lasta, (ft_lstlen(*a) / 2));
 	la = ft_count_compare(lhalf, *a, (ft_lstlen(*a) / 2));
 	ub = ft_count_compare(*b, lastb, (ft_lstlen(*b) / 2));
 	lb = ft_count_compare(rhalf, *b, (ft_lstlen(*b) / 2));
-	if (la > ua)
+	if (la > ua || lb < ub)
 	{
 		if (ua == 0 && la > 0)
 		{
@@ -133,7 +135,7 @@ void	push_swap(t_list **a, t_list **b)
 				return ;
 		}
 	}
-	if (*b && ft_count_compare(*b, *b, (ft_lstlen(*b))) == (int)ft_lstlen(*b) - 1 && ft_check_sort(*a, *b))
+	if ((*b && ft_count_compare(*b, *b, (ft_lstlen(*b))) == (int)ft_lstlen(*b) - 1 && ft_check_sort(*a, *b)) || (ft_lstlen(*b) == 1 && ft_check_sort(*a, *b)))
 	{
 		ft_push_pab(a, b);
 		printf("pa\n");
