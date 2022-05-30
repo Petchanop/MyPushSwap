@@ -28,6 +28,7 @@ void	ft_lstnumclear(t_list **lst)
 {
 	t_list	*tmp;
 
+	tmp = NULL;
 	while (*lst)
 	{
 		tmp = *lst;
@@ -41,6 +42,8 @@ t_list	*ft_find_lst(t_list *lst)
 {
 	size_t	half;
 
+	if (!lst)
+		return (NULL);
 	half = ft_lstlen(lst) / 2;
 	while (half)
 	{

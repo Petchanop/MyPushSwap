@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-t_list	*ft_intlst_new(int num);
+t_list	*ft_intlst_new(int num, int index);
 
 t_list	*ft_lstlast(t_list *lst);
 
@@ -32,7 +32,7 @@ t_list	*ft_reverse_rotate(t_list **a)
 	if (*a)
 	{
 		tmp = ft_lstlast(*a);
-		head = ft_intlst_new(tmp->content);
+		head = ft_intlst_new(tmp->content, tmp->index);
 		ft_add_lstfront(a, head);
 		tmp = *a;
 		while (tmp->next->next)

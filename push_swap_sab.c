@@ -19,14 +19,18 @@ void	ft_swap_ab(t_list *lst)
 	t_list	*tm1;
 	t_list	*tm2;
 	int		tmp;
+	int		index;
 
 	if (ft_lstlen(lst) > 1)
 	{
 		tm1 = lst;
 		tm2 = lst->next;
 		tmp = tm1->content;
+		index = tm1->index;
 		tm1->content = tm2->content;
+		tm1->index = tm2->index;
 		tm2->content = tmp;
+		tm2->index = index;
 	}
 }
 

@@ -1,0 +1,24 @@
+count sa
+280
+count sb
+      90
+count sab
+262
+count ra
+      44
+count rb
+      49
+count rr
+81
+count rra
+      12
+count rrb
+      49
+count rrr
+       0
+count pa
+     634
+count pb
+     634
+count instruction
+    2013 result.txt

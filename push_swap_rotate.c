@@ -21,9 +21,11 @@ void	ft_rotate_lst(t_list *a)
 	t_list	*tmp;
 	size_t	len;
 	int		temp;
+	int		index;
 
 	tmp = NULL;
 	len = 0;
+	index = 0;
 	if (a)
 	{	
 		len = ft_lstlen(a);
@@ -31,8 +33,11 @@ void	ft_rotate_lst(t_list *a)
 		while (len > 1)
 		{
 			temp = tmp->content;
+			index = tmp->index;
 			tmp->content = tmp->next->content;
+			tmp->index = tmp->next->index;
 			tmp->next->content = temp;
+			tmp->next->index = index;
 			tmp = tmp->next;
 			len--;
 		}

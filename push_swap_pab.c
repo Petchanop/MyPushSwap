@@ -14,7 +14,7 @@
 
 size_t	ft_lstlen(t_list *lst);
 
-t_list	*ft_intlst_new(int content);
+t_list	*ft_intlst_new(int content, int index);
 
 void	ft_add_lstfront(t_list **lst, t_list *new);
 
@@ -28,13 +28,14 @@ void	ft_push_pab(t_list **a, t_list **b)
 	if (!*b)
 		return ;
 	if (!ft_lstlen(*a))
-		*a = ft_intlst_new((*b)->content);
+		*a = ft_intlst_new((*b)->content, (*b)->index);
 	else
 	{
-		tmp = ft_intlst_new((*b)->content);
+		tmp = ft_intlst_new((*b)->content, (*b)->index);
 		ft_add_lstfront(a, tmp);
 	}
 	tmp = *b;
 	*b = (*b)->next;
 	free(tmp);
+	tmp = NULL;
 }

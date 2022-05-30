@@ -21,7 +21,7 @@ void	ft_print_lst(t_list *lst)
 	}
 }
 
-t_list	*ft_intlst_new(int content)
+t_list	*ft_intlst_new(int content, int index)
 {
 	t_list	*new;
 
@@ -29,6 +29,7 @@ t_list	*ft_intlst_new(int content)
 	if (!new)
 		return (NULL);
 	new->content = content;
+	new->index = index;
 	new->next = NULL;
 	return (new);
 }
