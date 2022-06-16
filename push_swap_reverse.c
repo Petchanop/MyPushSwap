@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_reverse.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:52:30 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/09 19:18:31 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/06/14 00:59:34 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ t_list	*ft_reverse_rotate(t_list **a)
 		tmp = *a;
 		while (tmp->next->next)
 			tmp = tmp->next;
+		free(tmp->next);
 		tmp->next = NULL;
 	}
 	return (*a);

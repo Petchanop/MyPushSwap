@@ -6,7 +6,7 @@
 /*   By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:09:17 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/05/28 16:26:25 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/06/07 13:04:56 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ typedef struct  s_queue
 {
     int start;
     int end;
+    int median;
     int range; 
 } t_queue;
 

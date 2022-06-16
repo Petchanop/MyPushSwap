@@ -6,7 +6,7 @@
 /*   By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 14:29:26 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/05/29 11:39:59 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/06/10 18:00:05 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,10 @@ int	ft_check_sort_n(t_list *a, t_list *b, int n)
 
 	count = 0;
 	len = ft_lstlen(a);
+	// printf("len : %d\n", len);
+	// printf("%d %d\n", (a)->index, (b)->index);
+	if (len == 1)
+		return (2);
     if (len > 1)
 	{
         while (a->next && n > 0)
@@ -115,16 +119,16 @@ int	ft_check_sortn(t_list *a, int len)
 	return (0);
 }
 
-int	ft_find_lstindex(t_list *lst, int n)
+int	ft_find_lstindex(t_list *lst, int start, int end)
 {
 	int	index;
 
 	index = 1;
-	if (!lst || !n)
+	if (!lst)
 		return (0);
 	while (lst)
 	{
-		if (lst->index == n)
+		if (lst->index >= start && lst->index <= end)
 			return (index); 
 		lst = lst->next;
 		index++;

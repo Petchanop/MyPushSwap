@@ -6,7 +6,7 @@
 /*   By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:07:53 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/05/30 22:20:56 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:02:44 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int	main(int argc, char **argv)
 	{
 		if (ft_atoi(argv[i]) || !ft_atoi(argv[i]))
 		{
-			//printf("init a and b :\n");
 			while (i < argc)
 			{
 				a1 = ft_intlst_new(ft_atoi(argv[i]), i);
@@ -59,20 +58,13 @@ int	main(int argc, char **argv)
 		while (i < (int)ft_lstlen(a))
 		{
 			a1->index = ft_count_compare(a, a1, ft_lstlen(a)) + 1;
-			//printf("%d\n", a1->index);
 			a1 = a1->next;
 			i++;
 		}
 		min = ft_find_min(a, ft_lstlen(a) - 1);
 		len.range = ft_lstlen(a);
 		i = 0;
-		// while (ft_check_sort(a, b) != 1) // && i < 10)
-		// {
-			push_swap(&a, &b, len);
-			//ft_show_ab(a, b);
-			//printf("round : %d\n", i);
-		// 	i++;
-		// }
+		push_swap(&a, &b, len);
 		//ft_show_ab(a, b);
 		if (ft_check_sort(a, b))// && !b)
 		{

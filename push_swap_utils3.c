@@ -6,7 +6,7 @@
 /*   By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 18:31:11 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/05/30 18:23:32 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/06/11 16:06:02 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_check_sort(t_list *a, t_list *b)
 
 	count = 0;
 	len = ft_lstlen(a);
+	if (len == 1)
+		return (2);
 	while (a->next)
 	{
 		if (a->content <= a->next->content && a->next)
@@ -43,10 +45,10 @@ t_list	*ft_find_max(t_list *a, int n)
 	lstmax = NULL;
 	while (a && n)
 	{
-		if (a->content > max)
+		if (a->index > max)
 		{
 			lstmax = a;
-			max = a->content;
+			max = a->index;
 		}
 		a = a->next;
 		n--;
@@ -59,10 +61,13 @@ int	ft_find_maxn(t_list *a, int n)
 	int	i;	
 
 	i = 0;
-	while (a->index != n)
+	if (a || n)
 	{
-		a = a->next;
-		i++;
+		while (a->index != n && i < (int)ft_lstlen(a))
+		{
+			a = a->next;
+			i++;
+		}
 	}
 	return (i);
 }
@@ -71,8 +76,8 @@ int	ft_find_minn(t_list *a, int n)
 {
 	int	i;	
 
-	i = 0;
-	while (a->index != 1 && i <= n)
+	i = 1;
+	while (a->index != n && i <= (int)ft_lstlen(a))
 	{
 		a = a->next;
 		i++;
