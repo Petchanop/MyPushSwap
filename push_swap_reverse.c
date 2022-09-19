@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_reverse.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:52:30 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/06/14 00:59:34 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/19 23:01:23 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ void	ft_dellst(t_list **lst);
 
 void	ft_add_lstfront(t_list **lst, t_list *new);
 
-t_list	*ft_reverse_rotate(t_list **a)
+void	ft_reverse_rotate(t_list **a)
 {
 	t_list	*head;
 	t_list	*tmp;
+	t_list	*del;
 
 	head = NULL;
 	tmp = NULL;
@@ -35,16 +36,18 @@ t_list	*ft_reverse_rotate(t_list **a)
 		head = ft_intlst_new(tmp->content, tmp->index);
 		ft_add_lstfront(a, head);
 		tmp = *a;
-		while (tmp->next->next)
+		while (tmp->next != NULL)
+		{
+			del = tmp;
 			tmp = tmp->next;
-		free(tmp->next);
-		tmp->next = NULL;
+		}
+		del->next = NULL;
+		free(tmp);
 	}
-	return (*a);
 }
 
 void	ft_reverse_all(t_list **a, t_list **b)
 {
-	*a = ft_reverse_rotate(a);
-	*b = ft_reverse_rotate(b);
+	ft_reverse_rotate(a);
+	ft_reverse_rotate(b);
 }

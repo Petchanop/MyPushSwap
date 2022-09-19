@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+         #
+#    By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/16 11:30:37 by npiya-is          #+#    #+#              #
-#    Updated: 2022/06/14 00:46:34 by npiya-is         ###   ########.fr        #
+#    Updated: 2022/09/18 22:30:25 by npiya-is         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra 
 
 SRCS = push_swap.c \
        push_swap_reverse.c \
@@ -23,6 +23,7 @@ SRCS = push_swap.c \
        push_swap_utils2.c \
        push_swap_utils3.c \
        push_swap_utils4.c \
+       push_swap_utils5.c \
 
 
 SRCS2 = push_swap2.c \
@@ -42,7 +43,7 @@ NAME2 = push_swap2
 all:$(NAME)
 
 $(NAME):$(SRCS)
-	$(CC) -g $(CFLAGS) -o $(NAME) main_swap.c $(SRCS2) -L libft/ -lft
+	$(CC) -g $(CFLAGS) -o $(NAME) main_swap.c $(SRCS) -L libft/ -lft
 
 
 $(NAME2):$(SRCS)

@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 23:40:03 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/09 19:31:38 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/19 23:48:03 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ft_add_lstfront(t_list **lst, t_list *new)
 	{
 		tmp = *lst;
 		*lst  = new;
-		new->next = tmp;
+		(*lst)->next = tmp;
 	}
 }
 

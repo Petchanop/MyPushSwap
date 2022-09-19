@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 23:15:58 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/04/05 17:19:29 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/19 22:29:40 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,16 @@ size_t	ft_lstlen(t_list *lst);
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	t_list	*last;
+
+	last = NULL;
 	if (lst)
 	{
 		while (lst->next)
 			lst = lst->next;
+		last = lst;
 	}
-	return (lst);
+	return (last);
 }
 
 void	ft_lstnumclear(t_list **lst)

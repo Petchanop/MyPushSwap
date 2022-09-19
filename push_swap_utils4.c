@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_utils4.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 14:29:26 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/06/10 18:00:05 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/19 22:52:18 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,6 @@ int	ft_check_sort_n(t_list *a, t_list *b, int n)
 
 	count = 0;
 	len = ft_lstlen(a);
-	// printf("len : %d\n", len);
-	// printf("%d %d\n", (a)->index, (b)->index);
 	if (len == 1)
 		return (2);
     if (len > 1)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 17:28:22 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/06/14 00:50:13 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/19 22:55:21 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ft_add_lstfront(t_list **lst, t_list *new);
 
 void	ft_push_pab(t_list **a, t_list **b);
 
-void	sort_stack_a(t_list **a, t_list **b);//, t_queue len);//, t_queue len);
+void	sort_stack_a(t_list **a, t_list **b);
 
 int	find_next_index(t_list *a, t_queue n)
 {
@@ -110,6 +110,7 @@ void	sort_stack(t_list **a, t_list **b, t_queue len)
 	int	i;
 	int	lstindex;
 	int	lastindex;
+	int	count_ra;
 	t_list	*lsta;
 	t_list	*maxa;
 	t_list	*lastb;
@@ -122,14 +123,25 @@ void	sort_stack(t_list **a, t_list **b, t_queue len)
 		if (*b)
 			lastb = ft_lstlast(*b);
 		
-		if ((*a)->index >= len.start && (*a)->index <= len.end && (*a)->index != len.range)
+		if ((*a)->index >= len.start && (*a)->index <= len.end && (*a)->index != len.range )
 		{
-			ft_push_pab(b, a);
-			printf("pb\n");
+			if ((*a)->index == len.range - 1 && (*a)->next->index != len.range && ft_lstlen(*a) < 10)
+			{
+				ft_swap_ab(*a);
+				printf("sa\n");
+			}
+			else
+			{
+				ft_push_pab(b, a);
+				printf("pb\n");
+			}
 		}
 		lastindex = find_last_index(*a, len);
-		while (lstindex != 1 && (int)ft_lstlen(*b) != len.end )//&& )
+		count_ra = count_rotate(*a, len);
+		while (lstindex != 1 && (int)ft_lstlen(*b) != len.end )
 		{
+			//printf("index = %d\n",  (*a)->index);
+			//printf("len.end = %d\n",  len.end);
 			lsta = ft_find_lstat(*a, lstindex - 1);
 			if (ft_lstlen(*b) > 2 && (*b)->index < len.median)
 			{
@@ -138,11 +150,20 @@ void	sort_stack(t_list **a, t_list **b, t_queue len)
 			}
 			else
 			{
-				ft_rotate_lst(*a);
-				printf("ra\n");
+				if (count_ra > (int)ft_lstlen(*a) / 2)
+				{
+					ft_reverse_rotate(a);
+					printf("rra\n");
+				}
+				else
+				{
+					ft_rotate_lst(*a);
+					printf("ra\n");
+				}
 			}
 			lstindex--;
 		}
+		//printf("index = %d\n",  (*a)->index);
 		if (!((*a)->index >= len.start && (*a)->index <= len.end) && ft_lstlen(*b) > 2 && (*b)->index < len.median)
 		{
 			ft_rotate_all(*a, *b);
@@ -180,11 +201,8 @@ void	sort_stack_a(t_list **a, t_list **b)
 	maxa = ft_find_max(*a, ft_lstlen(*a));
 	while (ft_check_sort(*a, *b) != 1)// && i < 3053)
 	{
-		//printf("%d %d\n", lstindex, maxb->index);
-		//printf("check : %d %zu\n", ft_check_sort(*a, *b), ft_lstlen(*b));
 		maxb = ft_find_max(*b, ft_lstlen(*b));
 		lstindex = ft_find_maxn(*b, maxb->index);
-		
 		if (lasta->index != maxa->index)
 		{
 			while (lasta->index != maxa->index)// && j < 1)
@@ -198,7 +216,7 @@ void	sort_stack_a(t_list **a, t_list **b)
 		} 
 		if ((*a)->index < maxb->index && ft_check_sort_n(*a, *b, ft_lstlen(*a)) != 1 )//&& lstindex != 1)
 		{
-			while ((*a)->index < maxb->index)// && ft_lstlen(*a) > 1)
+			while ((*a)->index < maxb->index)
 			{
 				ft_push_pab(b, a);
 				printf("pb\n");
@@ -218,22 +236,24 @@ void	sort_stack_a(t_list **a, t_list **b)
   	    	printf("sb\n");	
 		}
 		//ft_show_ab(*a, *b);
-	
 		if ((*b)->index != maxb->index && ft_lstlen(*b) >= 3)
 		{
-			while ((lstindex != 1 || lstindex < (int)ft_lstlen(*b)) && (*b)->index != maxb->index)
+			while ((lstindex != 1 || lstindex < (int)ft_lstlen(*b)) && (*b)->index != maxb->index && ft_lstlen(*b) > 1)
 			{
 				maxb = ft_find_max(*b, ft_lstlen(*b));
 				lstindex = ft_find_maxn(*b, maxb->index);
-				//printf("%d %d %d %zu\n", lstindex, maxb->index, (*b)->index, ft_lstlen(*b));
 				if (lstindex < (int)(ft_lstlen(*b) / 2))
 				{
-					ft_rotate_lst(*b);
-					printf("rb\n");
 					if (ft_check_sort_n(*a, *b, ft_lstlen(*a)) && (*b) && (*a)->index == (*b)->index + 1)
 					{
 						ft_push_pab(a, b);
 						printf("pa\n");
+						//continue ;
+					}
+					else
+					{
+						ft_rotate_lst(*b);
+						printf("rb\n");
 					}
 				}
 				else
@@ -241,6 +261,7 @@ void	sort_stack_a(t_list **a, t_list **b)
 					ft_reverse_rotate(b);
 					printf("rrb\n");
 				}
+//				ft_show_ab(*a, *b);
 				rindex++;
 			}
 			//ft_show_ab(*a, *b);
@@ -254,6 +275,8 @@ void	sort_stack_a(t_list **a, t_list **b)
 			if (ft_check_sort(*a, *b) == 1)
 			{
 			//	ft_show_ab(*a, *b);
+				ft_lstnumclear(a);
+				ft_lstnumclear(b);
 				exit(0);
 			}
 		}
@@ -263,7 +286,7 @@ void	sort_stack_a(t_list **a, t_list **b)
 			printf("pb\n");
 			//ft_show_ab(*a, *b);
 		}
-	//	ft_show_ab(*a, *b);
+		//ft_show_ab(*a, *b);
 		i++;
 	}
 //	ft_show_ab(*a, *b);
@@ -276,17 +299,16 @@ void	push_swap(t_list **a, t_list **b, t_queue len)
 	int	i;
 	
 	if (ft_lstlen(*a) > 20 && ft_lstlen(*a) <= 100)
-		n = 20;
+		n = ft_lstlen(*a) / 5;
 	if (ft_lstlen(*a) > 100)
-		n = 50;
+		n = ft_lstlen(*a) / 10;
 	if (ft_lstlen(*a) <= 20)
-		n = 5;
+		n = ft_lstlen(*a);
 	i = 0;
 	len.start = 1;
 	len.end = n;
 	len.median = n / 2;
-	//ft_show_ab(*a, *b);
-	while (ft_check_sort(*a, *b) != 1)// && i < 12) 
+	while (ft_check_sort(*a, *b) != 1)// && i < 6) 
 	{
 		if ((int)ft_lstlen(*a) > n)
 			sort_stack(a, b, len);
@@ -300,11 +322,11 @@ void	push_swap(t_list **a, t_list **b, t_queue len)
 		}
 		else
 		{
-		//	ft_show_ab(*a, *b);
+			//ft_show_ab(*a, *b);
 			sort_stack_a(a, b);
 			exit(0);
 		}
-	//	ft_show_ab(*a, *b);
+		//ft_show_ab(*a, *b);
 		len.start = len.end + 1;
 		len.end += n;
 		len.median = (len.end + len.start) / 2;

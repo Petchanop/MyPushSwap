@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npiya-is <npiya-is@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:07:53 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/05/31 13:02:44 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/18 20:58:23 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 				ft_add_lst(&a, a1);
 				i++;
 			}
-			// ft_show_ab(a, b);
+			//ft_show_ab(a, b);
 		}
 		i = 0;
 		a1 = a;
