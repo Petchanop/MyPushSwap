@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_reverse.c                                :+:      :+:    :+:   */
+/*   push_swap_sorta2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 20:52:30 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/22 17:28:22 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/09/24 22:45:02 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/09/25 04:24:01 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_reverse_rotate(t_list **a)
+void	pa_pb_exit(t_list **a, t_list **b)
 {
-	t_list	*head;
-	t_list	*tmp;
-	t_list	*del;
-
-	head = NULL;
-	tmp = NULL;
-	if (*a)
+	if (ft_check_sort_n(*a, *b, ft_lstlen(*a))
+		&& (*b) && (*a)->index == (*b)->index + 1)
 	{
-		tmp = *a;
-		while (tmp->next != NULL)
+		ft_push_pab(a, b);
+		write(1, "pa\n", 3);
+		if (ft_check_sort(*a, *b) == 1)
 		{
-			del = tmp;
-			tmp = tmp->next;
+			ft_lstnumclear(a);
+			ft_lstnumclear(b);
+			exit(0);
 		}
-		tmp->next = *a;
-		*a = tmp;
-		del->next = NULL;
 	}
-}
-
-void	ft_reverse_all(t_list **a, t_list **b)
-{
-	ft_reverse_rotate(a);
-	ft_reverse_rotate(b);
+	if (ft_lstlen(*b) > 1 && ft_check_sort_n(*a, *b, ft_lstlen(*a)) != 1
+		&& (*a)->index < (*b)->index)
+	{
+		ft_push_pab(b, a);
+		write(1, "pb\n", 3);
+	}
 }

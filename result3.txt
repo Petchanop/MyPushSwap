@@ -1,0 +1,2793 @@
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+pb
+rr
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rb
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+rr
+pb
+rr
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+rb
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+rb
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rb
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+pb
+rb
+pb
+rr
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+rr
+pb
+ra
+pb
+ra
+pb
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+rr
+ra
+ra
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+pb
+rb
+pb
+rr
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+rr
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+rr
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+rb
+pb
+rr
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+rb
+pb
+ra
+ra
+pb
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+rb
+pb
+rb
+pb
+rr
+pb
+rr
+ra
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rb
+pb
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+pb
+rr
+ra
+pb
+pb
+ra
+pb
+ra
+ra
+pb
+pb
+rr
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+rb
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+rb
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+pb
+rr
+pb
+rr
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+ra
+ra
+pb
+rb
+pb
+ra
+ra
+ra
+ra
+pb
+pb
+pb
+ra
+pb
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rb
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+pb
+ra
+pb
+rr
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+pb
+pb
+pb
+rr
+pb
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+rb
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+ra
+ra
+ra
+ra
+pb
+rr
+pb
+rr
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+rr
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+rb
+pb
+pb
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rb
+pb
+rr
+ra
+ra
+ra
+pb
+rb
+pb
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+pb
+rr
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rb
+pb
+pb
+rb
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+rr
+ra
+pb
+rr
+pb
+rr
+ra
+ra
+ra
+pb
+pb
+ra
+pb
+ra
+pb
+ra
+pb
+pb
+rr
+ra
+pb
+rr
+pb
+rr
+pb
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+rr
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+pb
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+pb
+pb
+rb
+pb
+pb
+ra
+ra
+pb
+rr
+pb
+pb
+ra
+pb
+rr
+ra
+pb
+ra
+pb
+rb
+pb
+rb
+pb
+rr
+pb
+ra
+pb
+rr
+ra
+pb
+rb
+pb
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+pb
+ra
+ra
+pb
+rb
+pb
+pb
+pb
+pb
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+rr
+rr
+pb
+ra
+pb
+ra
+pb
+pb
+pb
+rb
+pb
+rr
+pb
+rr
+pb
+pb
+ra
+pb
+pb
+rr
+pb
+rr
+pb
+rr
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+rr
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+pb
+rr
+pb
+rr
+ra
+pb
+ra
+pb
+rr
+ra
+pb
+pb
+rr
+pb
+ra
+pb
+rb
+pb
+pb
+pb
+rr
+pb
+rb
+pb
+rb
+pb
+pb
+rb
+pb
+rb
+pb
+rr
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+rr
+ra
+pb
+ra
+pb
+pb
+ra
+ra
+ra
+pb
+rb
+pb
+rb
+pb
+rr
+pb
+rb
+pb
+ra
+pb
+ra
+ra
+pb
+pb
+rr
+pb
+rr
+ra
+pb
+rb
+pb
+ra
+ra
+pb
+rb
+pb
+pb
+rb
+pb
+ra
+ra
+ra
+ra
+pb
+pb
+rb
+pb
+rr
+pb
+pb
+rb
+pb
+pb
+rb
+pb
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+pb
+pb
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+pb
+pb
+pb
+rb
+pb
+rr
+ra
+pb
+ra
+pb
+pb
+rb
+pb
+rb
+pb
+pb
+rb
+pb
+pb
+pb
+pb
+rb
+pb
+rb
+pb
+pb
+rb
+pb
+rb
+pb
+pb
+pb
+pb
+rb
+pb
+rb
+pb
+pb
+pb
+pb
+pb
+rb
+pb
+pb
+rb
+pb
+pb
+rb
+pb
+rb
+pb
+pb
+pb
+pb
+ra
+pb
+pb
+pb
+pb
+pb
+pb
+ra
+pb
+---------------------------------------
+a			b
+993	498		987	497
+995	499		847	462
+998	500		762	437
+			888	473
+			832	458
+			962	492
+			853	464
+			898	476
+			957	490
+			985	496
+			965	493
+			896	475
+			865	470
+			906	479
+			949	488
+			892	474
+			881	472
+			928	483
+			916	481
+			945	487
+			944	486
+			857	466
+			909	480
+			864	469
+			903	477
+			936	485
+			855	465
+			863	468
+			870	471
+			961	491
+			956	489
+			905	478
+			858	467
+			976	495
+			931	484
+			925	482
+			968	494
+			695	425
+			662	417
+			687	423
+			683	422
+			664	418
+			742	432
+			701	426
+			584	405
+			605	407
+			660	416
+			729	429
+			621	411
+			613	409
+			746	433
+			670	420
+			578	404
+			738	430
+			656	415
+			710	427
+			631	413
+			688	424
+			680	421
+			599	406
+			722	428
+			629	412
+			655	414
+			570	403
+			611	408
+			616	410
+			739	431
+			668	419
+			747	434
+			463	369
+			380	345
+			459	367
+			456	365
+			452	364
+			470	372
+			417	353
+			381	346
+			464	370
+			377	343
+			431	358
+			424	356
+			397	351
+			395	350
+			385	347
+			461	368
+			468	371
+			441	360
+			414	352
+			440	359
+			430	357
+			375	342
+			458	366
+			444	361
+			451	363
+			423	355
+			394	349
+			370	341
+			419	354
+			388	348
+			258	309
+			227	300
+			195	291
+			221	298
+			250	305
+			216	296
+			204	292
+			188	289
+			175	285
+			141	279
+			208	293
+			253	306
+			142	280
+			185	288
+			234	302
+			254	307
+			209	294
+			149	282
+			248	304
+			230	301
+			183	287
+			179	286
+			255	308
+			235	303
+			215	295
+			193	290
+			259	310
+			151	283
+			167	284
+			224	299
+			220	297
+			146	281
+			114	275
+			-62	230
+			-82	223
+			4	245
+			6	246
+			-89	220
+			-72	226
+			-46	233
+			-45	234
+			-83	222
+			-19	240
+			-107	217
+			-40	236
+			-84	221
+			-68	227
+			-24	238
+			-39	237
+			-93	219
+			-64	229
+			-16	241
+			-75	225
+			-8	243
+			-66	228
+			-52	231
+			7	247
+			-49	232
+			-21	239
+			14	248
+			-10	242
+			-42	235
+			-1	244
+			-97	218
+			-262	175
+			-305	165
+			-225	186
+			-280	172
+			-317	164
+			-234	183
+			-337	161
+			-324	163
+			-363	157
+			-347	159
+			-364	156
+			-341	160
+			-268	174
+			-258	177
+			-244	179
+			-240	180
+			-291	169
+			-281	171
+			-231	184
+			-236	182
+			-304	166
+			-259	176
+			-331	162
+			-238	181
+			-300	167
+			-272	173
+			-284	170
+			-353	158
+			-367	155
+			-248	178
+			-230	185
+			-298	168
+			-493	123
+			-622	94
+			-495	122
+			-518	117
+			-569	105
+			-530	114
+			-501	119
+			-533	113
+			-576	103
+			-601	97
+			-557	107
+			-603	96
+			-492	124
+			-504	118
+			-599	99
+			-593	102
+			-498	120
+			-549	109
+			-571	104
+			-522	116
+			-534	112
+			-497	121
+			-528	115
+			-604	95
+			-598	100
+			-539	111
+			-561	106
+			-625	93
+			-552	108
+			-597	101
+			-600	98
+			-545	110
+			-863	33
+			-821	44
+			-822	43
+			-739	62
+			-816	45
+			-832	41
+			-797	48
+			-834	40
+			-850	36
+			-776	52
+			-769	53
+			-781	51
+			-862	34
+			-761	56
+			-757	57
+			-873	31
+			-765	55
+			-812	46
+			-793	49
+			-828	42
+			-866	32
+			-741	61
+			-842	38
+			-746	60
+			-754	59
+			-782	50
+			-767	54
+			-755	58
+			-847	37
+			-807	47
+			-855	35
+			-835	39
+			-990	4
+			-933	16
+			-899	25
+			-877	30
+			-891	27
+			-882	28
+			-937	13
+			-908	21
+			-995	1
+			-915	19
+			-994	2
+			-922	17
+			-907	22
+			-905	23
+			-973	8
+			-935	15
+			-879	29
+			-989	5
+			-959	10
+			-993	3
+			-962	9
+			-903	24
+			-946	11
+			-942	12
+			-896	26
+			-974	7
+			-982	6
+			-916	18
+			-912	20
+			-936	14
+			-680	77
+			-640	91
+			-725	67
+			-668	83
+			-671	81
+			-719	68
+			-643	89
+			-692	73
+			-673	79
+			-631	92
+			-685	76
+			-669	82
+			-674	78
+			-665	86
+			-727	66
+			-667	84
+			-645	88
+			-641	90
+			-666	85
+			-700	72
+			-714	69
+			-661	87
+			-688	75
+			-709	70
+			-735	63
+			-733	64
+			-703	71
+			-689	74
+			-672	80
+			-732	65
+			-372	154
+			-483	125
+			-477	127
+			-419	144
+			-458	135
+			-388	151
+			-391	150
+			-385	152
+			-471	130
+			-417	145
+			-405	148
+			-428	141
+			-427	142
+			-393	149
+			-450	139
+			-376	153
+			-459	134
+			-469	131
+			-437	140
+			-475	128
+			-452	138
+			-466	132
+			-406	147
+			-454	137
+			-420	143
+			-478	126
+			-473	129
+			-457	136
+			-408	146
+			-462	133
+			-113	214
+			-137	206
+			-115	213
+			-155	201
+			-197	190
+			-108	216
+			-136	207
+			-190	192
+			-206	189
+			-217	187
+			-128	208
+			-144	204
+			-117	212
+			-194	191
+			-126	210
+			-163	199
+			-180	195
+			-139	205
+			-112	215
+			-158	200
+			-167	198
+			-173	197
+			-124	211
+			-175	196
+			-182	194
+			-127	209
+			-152	202
+			-207	188
+			-184	193
+			-148	203
+			-80	224
+			50	257
+			84	265
+			52	258
+			70	263
+			139	278
+			49	256
+			82	264
+			91	267
+			66	261
+			21	249
+			47	254
+			112	274
+			60	260
+			33	251
+			107	273
+			48	255
+			133	277
+			90	266
+			57	259
+			68	262
+			102	270
+			30	250
+			36	252
+			93	268
+			40	253
+			105	272
+			97	269
+			125	276
+			103	271
+			329	326
+			365	340
+			268	311
+			326	324
+			355	335
+			293	316
+			330	327
+			298	317
+			317	322
+			346	333
+			314	321
+			328	325
+			344	332
+			321	323
+			304	319
+			333	329
+			276	313
+			280	315
+			337	330
+			360	338
+			277	314
+			356	336
+			363	339
+			308	320
+			300	318
+			331	328
+			343	331
+			357	337
+			275	312
+			352	334
+			378	344
+			446	362
+			529	391
+			491	380
+			561	399
+			474	373
+			535	392
+			486	378
+			542	393
+			479	374
+			501	384
+			560	398
+			565	401
+			544	394
+			480	375
+			488	379
+			525	389
+			516	388
+			482	377
+			553	395
+			494	382
+			567	402
+			492	381
+			503	385
+			558	397
+			528	390
+			511	387
+			556	396
+			481	376
+			497	383
+			504	386
+			564	400
+			778	441
+			789	444
+			817	453
+			802	446
+			821	455
+			777	440
+			792	445
+			820	454
+			806	447
+			754	435
+			810	450
+			783	442
+			807	448
+			849	463
+			763	438
+			835	459
+			822	456
+			787	443
+			756	436
+			771	439
+			829	457
+			812	451
+			808	449
+			841	460
+			816	452
+			843	461
+---------------------------------------

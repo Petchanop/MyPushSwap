@@ -5,79 +5,67 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 23:40:03 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/19 23:48:03 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/05/28 15:43:49 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/09/25 16:26:29 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_print_lst(t_list *lst)
+int	count_rotate(t_list *a, t_queue n)
 {
-	while (lst != NULL)
+	int	countr;
+
+	countr = 0;
+	if (a)
 	{
-		printf("%d\n", lst->content);
-		lst = lst->next;
+		while (a)
+		{
+			if (a->index > n.end || a->index < n.start)
+				countr++;
+			else
+				break ;
+			a = a->next;
+		}
 	}
+	return (countr);
 }
 
-t_list	*ft_intlst_new(int content, int index)
+int	find_min_index(t_list *a)
 {
-	t_list	*new;
+	int	minindex;
 
-	new = malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->index = index;
-	new->next = NULL;
-	return (new);
-}
-
-void	ft_add_lst(t_list **lst, t_list *new)
-{
-	t_list	*tmp;
-
-	tmp = *lst;
-	if (*lst)
+	if (a)
 	{
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
-		lst = &tmp;
+		minindex = a->index;
+		while (a)
+		{
+			if (a->index < minindex)
+				minindex = a->index;
+			a = a->next;
+		}
+		return (minindex);
 	}
-	else
-		*lst = new;
+	return (0);
 }
 
-void	ft_add_lstfront(t_list **lst, t_list *new)
+int	count_ramin(t_list *a)
 {
-	t_list	*tmp;
+	int	countr;
+	int	min;
 
-	tmp = NULL;
-	if (new)
+	countr = 0;
+	min = find_min_index(a);
+	if (a)
 	{
-		tmp = *lst;
-		*lst  = new;
-		(*lst)->next = tmp;
+		while (a)
+		{
+			if (a->index != min)
+				countr++;
+			else
+				break ;
+			a = a->next;
+		}
 	}
-}
-
-void	ft_dellst(t_list **lst)
-{
-	if (*lst)
-		*lst = (*lst)->next;
-}
-
-size_t	ft_lstlen(t_list *lst)
-{
-	size_t	len;
-
-	len = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		len++;
-	}
-	return (len);
+	return (countr);
 }

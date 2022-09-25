@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_reverse.c                                :+:      :+:    :+:   */
+/*   test_pab.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 20:52:30 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/22 17:28:22 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/09/22 16:40:00 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/09/22 16:58:50 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_reverse_rotate(t_list **a)
+int	main(int argc, char **argv)
 {
-	t_list	*head;
-	t_list	*tmp;
-	t_list	*del;
+	static t_list	*a;
+	static t_list	*b;
 
-	head = NULL;
-	tmp = NULL;
-	if (*a)
+	a = NULL;
+	b = NULL;
+	if (argc > 1)
 	{
-		tmp = *a;
-		while (tmp->next != NULL)
-		{
-			del = tmp;
-			tmp = tmp->next;
-		}
-		tmp->next = *a;
-		*a = tmp;
-		del->next = NULL;
+		format_input(argv, argc, &a);
+		add_index(&a);
+		ft_show_ab(a, b);
+		ft_reverse_rotate(&a);
+		// ft_push_pab(&b, &a);
+		ft_show_ab(a, b);
+		// ft_push_pab(&b, &a);
+		//ft_push_pab(&b, &a);
+		ft_reverse_rotate(&a);
+		ft_show_ab(a, b);
 	}
-}
-
-void	ft_reverse_all(t_list **a, t_list **b)
-{
-	ft_reverse_rotate(a);
-	ft_reverse_rotate(b);
 }
