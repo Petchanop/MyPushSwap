@@ -6,7 +6,7 @@
 #    By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/16 11:30:37 by npiya-is          #+#    #+#              #
-#    Updated: 2022/09/24 22:48:20 by npiya-is         ###   ########.fr        #
+#    Updated: 2022/09/25 22:36:03 by npiya-is         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,6 @@ NAME = push_swap
 
 NAME2 = push_swap2
 
-NAME3 = test_pab
-
 all:$(NAME)
 
 $(NAME):$(SRCS)
@@ -60,20 +58,12 @@ $(NAME):$(SRCS)
 $(NAME2):$(SRCS)
 	$(CC) -g $(CFLAGS) -o $(NAME2) main_swap.c $(SRCS2) -L libft/ -lft
 
-$(NAME3):$(SRCS)
-	$(CC) -g $(CFLAGS) -o $(NAME3) test_pab.c $(SRCS) -L libft/ -lft
-
 fclean:
 	rm -rf $(NAME)
 
 fclean1:
 	rm -rf $(NAME2)
 
-fclean2:
-	rm -rf $(NAME3)
-
 re: fclean all
 
 re1: fclean1 $(NAME2) 
-
-re2: fclean2 $(NAME3) 
