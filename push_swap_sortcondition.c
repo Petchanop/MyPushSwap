@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 20:37:50 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/25 16:47:24 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/28 22:46:59 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ void	ra_or_rr_or_rra(t_list **a, t_list **b, t_queue data)
 	{
 		if (ft_lstlen(*b) > 2 && ((*b)->index < (*b)->next->index
 				|| (*b)->index == data.end) && (*b)->index < data.median)
-			ft_rotate_all(*a, *b);
+			ft_write_rr(*a, *b);
 		else
 		{
 			if (count_ra > (int)ft_lstlen(*a) / 2)
 			{
-				ft_reverse_rotate(a);
+				ft_reverse_rotate(a, b);
 				write(1, "rra\n", 4);
 			}
 			else
@@ -70,7 +70,7 @@ void	ra_rr_rb(t_list **a, t_list **b, t_queue data)
 	if (lena > 10 && (!((*a)->index >= data.start && (*a)->index <= data.end)
 			|| (*a)->index == data.range) && lenb > 2
 		&& (*b)->index < data.median && ((*b)->index < (*b)->next->index))
-		ft_rotate_all(*a, *b);
+		ft_write_rr(*a, *b);
 	else if ((*a)->index == data.range)
 	{
 		ft_rotate_lst(*a);
@@ -95,14 +95,14 @@ void	push_minindex(t_list **a, t_list **b)
 	lena = (int)ft_lstlen(*a);
 	while ((*a)->index != minindex)
 	{
-		if (count_ra < lena / 2)
+		if (count_ra < lena / 2 && lena > 3)
 		{
 			ft_rotate_lst(*a);
 			write(1, "ra\n", 3);
 		}
 		else
 		{
-			ft_reverse_rotate(a);
+			ft_reverse_rotate(a, b);
 			write(1, "rra\n", 4);
 		}	
 	}

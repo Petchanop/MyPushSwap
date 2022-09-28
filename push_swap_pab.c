@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 01:59:12 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/22 16:53:16 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/28 02:17:34 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,12 @@ void	ft_push_pab(t_list **a, t_list **b)
 
 	tmp = NULL;
 	if (!*b)
-		return ;
+	{
+		write(2, "Error\n", 6);
+		ft_lstnumclear(a);
+		ft_lstnumclear(b);
+		exit(0);
+	}
 	if (!*a)
 	{
 		*a = *b;

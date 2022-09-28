@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap_checker.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 18:07:53 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/27 21:22:36 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/09/27 17:44:33 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/09/29 00:57:08 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,14 @@ int	main(int argc, char **argv)
 		format_input(argv, argc, &a);
 		add_index(&a);
 		len = initialize_tqueue(len, a);
-		push_swap(&a, &b, len);
+		read_operations(&a, &b);
 		if (ft_check_sort(a, b))
-		{
-			ft_lstnumclear(&a);
-			ft_lstnumclear(&b);
-			return (0);
-		}
+			write(1, "OK\n", 3);
+		else
+			write(1, "KO\n", 3);
+		/*ft_show_ab(a, b);*/
+		ft_lstnumclear(&a);
+		ft_lstnumclear(&b);
 	}
 	return (0);
 }

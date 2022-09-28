@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 17:28:22 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/25 21:38:02 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/28 22:42:20 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	arrange_stack(t_list **a, t_list **b, t_queue len)
 
 	lena = (int)ft_lstlen(*a);
 	lenb = (int)ft_lstlen(*b);
-	while (!ft_check_sortb(*b, len.end) && lenb != len.end && lena > 3)
+	while (!ft_check_sortb(*b, len.end) && lenb != len.end && lena > 5)
 	{
 		sa_or_pb(a, b, len);
 		ra_or_rr_or_rra(a, b, len);
@@ -33,7 +33,7 @@ void	arrange_stack(t_list **a, t_list **b, t_queue len)
 			len.end += len.section;
 			len.median = (len.end + len.start) / 2;
 		}
-		if (lena < len.section && lena <= 20 && lena > 3)
+		if (lena < len.section && lena <= 20)
 			push_minindex(a, b);
 	}
 	return ;
@@ -43,9 +43,14 @@ void	sort_stack_a(t_list **a, t_list **b)
 {
 	while (ft_check_sort(*a, *b) != 1)
 	{
+		if (!ft_check_sort_n(*a, *b, ft_lstlen(*a)) && ft_lstlen(*a) > 2)
+			sort_5(a, b);
 		sort_maxindex(*a);
-		pb_sa_sb(a, b);
-		sort_stackb(a, b);
+		if (*b)
+		{
+			pb_sa_sb(a, b);
+			sort_stackb(a, b);
+		}
 		pa_pb_exit(a, b);
 	}
 	return ;
@@ -60,7 +65,7 @@ void	push_swap(t_list **a, t_list **b, t_queue len)
 	{
 		if ((int)ft_lstlen(*a) > len.section)
 			arrange_stack(a, b, len);
-		else if ((int)ft_lstlen(*a) <= n && (int)ft_lstlen(*a) > 3)
+		else if ((int)ft_lstlen(*a) <= n && (int)ft_lstlen(*a) > 5)
 		{
 			if (len.end == len.range)
 				len.end--;

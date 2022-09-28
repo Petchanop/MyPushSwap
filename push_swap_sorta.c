@@ -6,11 +6,18 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 21:24:07 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/25 03:52:40 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/28 22:27:51 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	initialize_bdata(t_list **b, t_list **maxb, int *lenb, int *lstindex)
+{
+	*lenb = (int)ft_lstlen(*b);
+	*maxb = ft_find_max(*b, ft_lstlen(*b));
+	*lstindex = ft_find_maxn(*b, (*maxb)->index);
+}
 
 void	sort_maxindex(t_list *a)
 {
@@ -29,6 +36,11 @@ void	sort_maxindex(t_list *a)
 			lasta = ft_lstlast(a);
 		}
 	}
+	if (a->index > a->next->index && ft_lstlen(a) <= 3)
+	{
+		ft_swap_ab(a);
+		write(1, "sa\n", 3);
+	}
 }
 
 void	pb_sa_sb(t_list **a, t_list **b)
@@ -38,8 +50,8 @@ void	pb_sa_sb(t_list **a, t_list **b)
 
 	maxb = ft_find_max(*b, ft_lstlen(*b));
 	lstindex = ft_find_maxn(*b, maxb->index);
-	if ((*a)->index < maxb->index
-		&& ft_check_sort_n(*a, *b, ft_lstlen(*a)) != 1)
+	if (ft_check_sort_n(*a, *b, ft_lstlen(*a)) != 1
+		&& (*a)->index < maxb->index)
 	{
 		while ((*a)->index < maxb->index)
 		{
@@ -86,13 +98,6 @@ void	pa_sb_or_rb(t_list **a, t_list **b)
 	}
 }
 
-void	initialize_bdata(t_list **b, t_list **maxb, int *lenb, int *lstindex)
-{
-	*lenb = (int)ft_lstlen(*b);
-	*maxb = ft_find_max(*b, ft_lstlen(*b));
-	*lstindex = ft_find_maxn(*b, (*maxb)->index);
-}
-
 void	sort_stackb(t_list **a, t_list **b)
 {
 	int		lenb;
@@ -113,7 +118,7 @@ void	sort_stackb(t_list **a, t_list **b)
 				pa_sb_or_rb(a, b);
 			else if (lenb > 2)
 			{
-				ft_reverse_rotate(b);
+				ft_reverse_rotate(b, a);
 				write(1, "rrb\n", 4);
 			}
 		}

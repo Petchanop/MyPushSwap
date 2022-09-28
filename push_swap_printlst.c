@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 18:31:11 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/25 22:13:17 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/28 19:35:07 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 
 void	ft_print_lst(t_list *lst)
 {
-	while (lst != NULL)
+	if (lst)
 	{
-		ft_printf("%ld\n", lst->content);
+		ft_printf("%ld", lst->content);
+		ft_printf("		");
+		ft_printf("%d", lst->index);
 		lst = lst->next;
 	}
+	else
+		return ;
 }
 
 void	ft_show_ab(t_list *a, t_list *b)
@@ -35,7 +39,7 @@ void	ft_show_ab(t_list *a, t_list *b)
 			ft_printf("%d", a->index);
 			a = a->next;
 		}
-		printf("		");
+		ft_printf("		");
 		if (b)
 		{
 			ft_printf("%ld	", b->content);

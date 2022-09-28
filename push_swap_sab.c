@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 20:13:54 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/24 23:16:39 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/28 02:34:42 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ void	ft_swap_ab(t_list *lst)
 		tm1->index = tm2->index;
 		tm2->content = tmp;
 		tm2->index = index;
+	}
+	else
+	{
+		write(2, "Error\n", 6);
+		ft_lstnumclear(&lst);
+		exit(0);
 	}
 }
 

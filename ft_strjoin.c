@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_swap.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 18:07:53 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/27 21:22:36 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/09/28 23:42:13 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/09/28 23:47:56 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
-{
-	t_queue			len;
-	static t_list	*a;
-	static t_list	*b;
+size_t	ft_strlen(char const *str);
 
-	a = NULL;
-	b = NULL;
-	len.start = 1;
-	len.end = 0;
-	if (argc > 1)
+char	*ft_strjoin(char *s1, char *s2)
+{
+	size_t	i;
+	char	*str;
+
+	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!str)
 	{
-		check_empty(argv);
-		format_input(argv, argc, &a);
-		add_index(&a);
-		len = initialize_tqueue(len, a);
-		push_swap(&a, &b, len);
-		if (ft_check_sort(a, b))
-		{
-			ft_lstnumclear(&a);
-			ft_lstnumclear(&b);
-			return (0);
-		}
+		free(s1);
+		return (NULL);
 	}
-	return (0);
+	i = 0;
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	i = 0;
+	while (s2[i])
+	{
+		str[i + ft_strlen(s1)] = s2[i];
+		i++;
+	}
+	str[i + ft_strlen(s1)] = '\0';
+	free(s1);
+	return (str);
 }

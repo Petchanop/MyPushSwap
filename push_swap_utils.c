@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 15:43:49 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/25 16:26:29 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/27 21:21:57 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,24 @@ int	count_ramin(t_list *a)
 		}
 	}
 	return (countr);
+}
+
+t_queue	initialize_tqueue(t_queue que, t_list *a)
+{
+	size_t	len;
+	size_t	n;
+
+	len = ft_lstlen(a);
+	if (len > 20 && len <= 100)
+		n = len / 5;
+	if (len > 100)
+		n = len / 8;
+	if (len <= 20)
+		n = len;
+	que.start = 1;
+	que.end = n;
+	que.section = n;
+	que.median = (que.start + que.end) / 2;
+	que.range = len;
+	return (que);
 }

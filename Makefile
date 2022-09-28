@@ -6,15 +6,16 @@
 #    By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/16 11:30:37 by npiya-is          #+#    #+#              #
-#    Updated: 2022/09/25 22:36:03 by npiya-is         ###   ########.fr        #
+#    Updated: 2022/09/29 00:59:47 by npiya-is         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra 
+CFLAGS = -Wall -Wextra -Werror 
 
-SRCS = push_swap.c \
+SRCS = main_swap.c \
+       push_swap.c \
        push_swap_formatinput.c \
        push_swap_checkinput.c \
        push_swap_findindex.c \
@@ -34,36 +35,59 @@ SRCS = push_swap.c \
        ft_split.c \
        push_swap_utils.c \
 
-
-SRCS2 = push_swap2.c \
+SRCS_BONUS = push_swap_checker.c \
+       push_swap_formatinput.c \
+       push_swap_checksort.c \
+       push_swap_checkinput.c \
+       push_swap_findindex.c \
        push_swap_reverse.c \
        push_swap_pab.c \
        push_swap_sab.c \
        push_swap_rotate.c \
+       push_swap_lstmethod.c \
+       push_swap_lstmethod2.c \
+       push_swap_printlst.c \
+       ft_atoi.c \
+       ft_isdigit.c \
+       ft_split.c \
+       ft_strncmp.c \
+       ft_strjoin.c \
        push_swap_utils.c \
-       push_swap_utils2.c \
-       push_swap_utils3.c \
-       push_swap_utils4.c \
+       checker_operation.c \
+       checker_readinput.c \
+
+OBJS=$(SRCS:.c=.o)
+OBJS_BONUS=$(SRCS_BONUS:.c=.o)
 
 NAME = push_swap
 
-NAME2 = push_swap2
+DEBUG = debug
 
-all:$(NAME)
+BONUS = checker_bonus
 
-$(NAME):$(SRCS)
-	$(CC) -g $(CFLAGS) -o $(NAME) main_swap.c $(SRCS) -L libft/ -lft
+PRINTF = ft_printf
 
+all: $(NAME)
 
-$(NAME2):$(SRCS)
-	$(CC) -g $(CFLAGS) -o $(NAME2) main_swap.c $(SRCS2) -L libft/ -lft
+$(NAME): $(OBJS)
+	make -C $(PRINTF)
+	$(CC) -g $(CFLAGS) $(OBJS) -L ft_printf/ -lftprintf -o $(NAME)
 
-fclean:
+$(DEBUG): $(SRCS)
+	make -C $(PRINTF)
+	$(CC) -g $(CFLAGS) $(SRCS) -L ft_printf/ -lftprintf -o $(DEBUG)
+
+bonus: $(SRCS_BONUS)
+	$(CC) -g $(CFLAGS) $(SRCS_BONUS) -L ft_printf/ -lftprintf -o $(BONUS)
+
+clean:
+	make -C $(PRINTF) clean 
+	rm -rf $(OBJS)
+
+fclean:clean
 	rm -rf $(NAME)
-
-fclean1:
-	rm -rf $(NAME2)
+	rm -rf $(BONUS)
 
 re: fclean all
 
-re1: fclean1 $(NAME2) 
+.PHONY:clean fclean re all

@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 17:11:47 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/24 20:49:21 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/28 18:41:42 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,22 @@ void	ft_rotate_lst(t_list *a)
 
 void	ft_rotate_all(t_list *a, t_list *b)
 {
-	ft_rotate_lst(a);
-	ft_rotate_lst(b);
+	if (a && b)
+	{
+		ft_rotate_lst(a);
+		ft_rotate_lst(b);
+	}
+	else
+	{
+		ft_lstnumclear(&a);
+		ft_lstnumclear(&b);
+		write(2, "Error\n", 6);
+		exit(0);
+	}
+}
+
+void	ft_write_rr(t_list *a, t_list *b)
+{
+	ft_rotate_all(a, b);
 	write(1, "rr\n", 3);
 }

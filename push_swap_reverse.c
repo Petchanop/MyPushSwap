@@ -6,23 +6,20 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:52:30 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/22 17:28:22 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/28 18:47:28 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_reverse_rotate(t_list **a)
+void	ft_reverse_rotate(t_list **a, t_list **b)
 {
-	t_list	*head;
 	t_list	*tmp;
 	t_list	*del;
 
-	head = NULL;
-	tmp = NULL;
-	if (*a)
+	tmp = *a;
+	if (*a && ft_lstlen(*a) > 1)
 	{
-		tmp = *a;
 		while (tmp->next != NULL)
 		{
 			del = tmp;
@@ -31,11 +28,30 @@ void	ft_reverse_rotate(t_list **a)
 		tmp->next = *a;
 		*a = tmp;
 		del->next = NULL;
+		if (!*b)
+			*b = NULL;
+	}
+	else
+	{
+		ft_lstnumclear(a);
+		ft_lstnumclear(b);
+		write(2, "Error\n", 6);
+		exit(0);
 	}
 }
 
 void	ft_reverse_all(t_list **a, t_list **b)
 {
-	ft_reverse_rotate(a);
-	ft_reverse_rotate(b);
+	if (*a && *b)
+	{
+		ft_reverse_rotate(a, b);
+		ft_reverse_rotate(b, a);
+	}
+	else
+	{
+		ft_lstnumclear(a);
+		ft_lstnumclear(b);
+		write(2, "Error\n", 6);
+		exit(0);
+	}
 }

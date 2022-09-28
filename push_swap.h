@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:09:17 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/25 22:25:22 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/09/28 23:42:57 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,9 @@ void	ft_swap_ab(t_list *lst);
 void	ft_swap_bothab(t_list *a, t_list *b);
 void	ft_rotate_lst(t_list *a);
 void	ft_rotate_all(t_list *a, t_list *b);
-void	ft_reverse_rotate(t_list **a);
+void	ft_reverse_rotate(t_list **a, t_list **b);
 void	ft_reverse_all(t_list **a, t_list **b);
+void	ft_write_rr(t_list *a, t_list *b);
 void	ft_add_lst(t_list **lst, t_list *new);
 void	ft_add_lsfront(t_list **lst, t_list *new);
 void	ft_lstnumclear(t_list **lst);
@@ -57,7 +58,9 @@ void	push_minindex(t_list **a, t_list **b);
 void	sort_maxindex(t_list *a);
 void	pb_sa_sb(t_list **a, t_list **b);
 void	sort_stackb(t_list **a, t_list **b);
+void	sort_5(t_list **a, t_list **b);
 void	pa_pb_exit(t_list **a, t_list **b);
+void	read_operations(t_list **a, t_list **b);
 int		check_digit(char *num);
 int		check_double(t_list *lst1, t_list *lst2);
 int		check_input(t_list *lst);
@@ -69,18 +72,27 @@ int		ft_check_sortb(t_list *a, int n);
 int		ft_find_maxn(t_list *a, int n);
 int		ft_check_sortn(t_list *a, int len);
 int		ft_isdigit(int c);
+int		ft_strncmp(char const *s1, char const *s2, size_t n);
 int		ft_count_compare(t_list *a, t_list *a1, int n);
 int		find_next_index(t_list *a, t_queue n);
 int		find_next(t_list *a, int n);
 int		find_last_index(t_list *a, t_queue n);
 int		find_min_index(t_list *a);
+int		ft_printf(const char *format, ...);
+int		ss_sa_sb(char *input, t_list **a, t_list **b);
+int		rr_ra_rb(char *input, t_list **a, t_list **b);
+int		rrr_rra_rrb(char *input, t_list **a, t_list **b);
+int		pa_pb(char *input, t_list **a, t_list **b);
+int		compare_input(char *input, t_list **a, t_list **b);
 long	ft_atoi(char const *num);
 char	**ft_split(char const *s, char c);
+char	*ft_strjoin(char *s1, char *s2);
 size_t	ft_lstlen(t_list *lst);
 t_list	*ft_intlst_new(long num, int index);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_find_lstat(t_list *lst, int n);
 t_list	*ft_find_lst(t_list *lst);
 t_list	*ft_find_max(t_list *a, int n);
+t_queue	initialize_tqueue(t_queue que, t_list *a);
 
 #endif
