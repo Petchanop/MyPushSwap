@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:52:30 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/28 18:47:28 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/10/05 18:48:42 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,5 @@ void	ft_reverse_all(t_list **a, t_list **b)
 	{
 		ft_reverse_rotate(a, b);
 		ft_reverse_rotate(b, a);
-	}
-	else
-	{
-		ft_lstnumclear(a);
-		ft_lstnumclear(b);
-		write(2, "Error\n", 6);
-		exit(0);
 	}
 }

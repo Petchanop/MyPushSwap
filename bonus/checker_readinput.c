@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:49:52 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/09/29 00:09:01 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/10/05 18:47:14 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,12 @@ void	read_operations(t_list **a, t_list **b)
 				break ;
 		}
 		else
-			break ;
+		{
+			write(1, "Error\n", 6);
+			ft_lstnumclear(&a);
+			ft_lstnumclear(&b);
+			exit(0);
+		}
 		free(input);
 	}
 }
