@@ -6,7 +6,7 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:52:30 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/10/05 18:48:42 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/10/05 19:01:10 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,6 @@ void	ft_reverse_rotate(t_list **a, t_list **b)
 		del->next = NULL;
 		if (!*b)
 			*b = NULL;
-	}
-	else
-	{
-		ft_lstnumclear(a);
-		ft_lstnumclear(b);
-		write(2, "Error\n", 6);
-		exit(0);
 	}
 }
 

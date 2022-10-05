@@ -6,11 +6,20 @@
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:49:52 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/10/05 18:47:14 by npiya-is         ###   ########.fr       */
+/*   Updated: 2022/10/05 19:51:02 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	write_error(t_list **a, t_list **b, char *input)
+{
+	write(1, "Error\n", 6);
+	free(input);
+	ft_lstnumclear(a);
+	ft_lstnumclear(b);
+	exit(0);
+}
 
 char	*read_input(void)
 {
@@ -19,8 +28,8 @@ char	*read_input(void)
 	char	*input;
 	char	*command;
 
-	rd = 1;
 	buffer_size = 1;
+	rd = 1;
 	command = malloc((buffer_size) * sizeof(char));
 	input = malloc((buffer_size + 1) * sizeof(char));
 	if (!input || !command)
@@ -30,6 +39,8 @@ char	*read_input(void)
 	while (rd)
 	{
 		rd = read(0, input, buffer_size);
+		if (rd == 0)
+			break ;
 		command = ft_strjoin(command, input);
 		if (input[0] == '\n')
 			break ;
@@ -48,6 +59,8 @@ int	compare_input(char *input, t_list **a, t_list **b)
 		return (1);
 	if (pa_pb(input, a, b))
 		return (1);
+	if (!input)
+		return (2);
 	else
 		return (0);
 }
@@ -64,15 +77,18 @@ void	read_operations(t_list **a, t_list **b)
 		if (compare_input(input, a, b))
 		{
 			if (ft_check_sortn(*a, lena) == 1)
+			{	
+				free(input);
 				break ;
+			}
+		}
+		else if (input[0] == '\0')
+		{
+			free(input);
+			break ;
 		}
 		else
-		{
-			write(1, "Error\n", 6);
-			ft_lstnumclear(&a);
-			ft_lstnumclear(&b);
-			exit(0);
-		}
+			write_error(a, b, input);
 		free(input);
 	}
 }
